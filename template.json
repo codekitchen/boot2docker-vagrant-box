@@ -30,6 +30,14 @@
             "type": "shell",
             "execute_command": "{{ .Vars }} sudo -E -S sh '{{ .Path }}'",
             "scripts": [
+                "b2d-add-partition.sh"
+            ],
+            "only": ["virtualbox-iso"]
+        },
+        {
+            "type": "shell",
+            "execute_command": "{{ .Vars }} sudo -E -S sh '{{ .Path }}'",
+            "scripts": [
                 "b2d-provision.sh"
             ]
         }
