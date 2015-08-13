@@ -1,4 +1,4 @@
-VERSION=1.7.1
+VERSION=1.8.0
 
 build: boot2docker-vagrant.iso
 	time (packer build -parallel=false template.json)
