@@ -5,6 +5,7 @@
     },
     "builders": [{
         "type": "virtualbox-iso",
+        "headless": "true",
         "iso_url": "{{user `B2D_ISO_FILE`}}",
         "iso_checksum_type": "md5",
         "iso_checksum": "{{user `B2D_ISO_CHECKSUM`}}",
@@ -16,6 +17,7 @@
         "shutdown_command": "sudo poweroff"
     }, {
         "type": "vmware-iso",
+        "headless": "true",
         "iso_url": "{{user `B2D_ISO_FILE`}}",
         "iso_checksum_type": "md5",
         "iso_checksum": "{{user `B2D_ISO_CHECKSUM`}}",
