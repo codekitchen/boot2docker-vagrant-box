@@ -1,10 +1,11 @@
 {
     "variables": {
         "B2D_ISO_FILE": "boot2docker.iso",
-        "B2D_ISO_CHECKSUM": "7e231d3c33e08f08b604fdc9a557b64b"
+        "B2D_ISO_CHECKSUM": "29839aeef97758e142eae4c2fd10890b"
     },
     "builders": [{
         "type": "virtualbox-iso",
+        "headless": "true",
         "iso_url": "{{user `B2D_ISO_FILE`}}",
         "iso_checksum_type": "md5",
         "iso_checksum": "{{user `B2D_ISO_CHECKSUM`}}",
@@ -16,6 +17,7 @@
         "shutdown_command": "sudo poweroff"
     }, {
         "type": "vmware-iso",
+        "headless": "true",
         "iso_url": "{{user `B2D_ISO_FILE`}}",
         "iso_checksum_type": "md5",
         "iso_checksum": "{{user `B2D_ISO_CHECKSUM`}}",

@@ -1,8 +1,13 @@
-VERSION=1.8.1
+VERSION=1.8.2
 
+all: validate build
+
+validate: template.json
+	packer validate template.json
+	
 build: boot2docker-vagrant.iso
 	time (packer build -parallel=false template.json)
-
+	
 prepare: clean boot2docker-vagrant.iso
 
 boot2docker-vagrant.iso:
