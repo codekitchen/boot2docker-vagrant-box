@@ -14,6 +14,6 @@ boot2docker-vagrant.iso:
 	wget -O boot2docker.iso https://github.com/boot2docker/boot2docker/releases/download/v${VERSION}/boot2docker.iso
 
 clean:                                                                                                                                                                                                                               
-        rm -rf *.iso *.box
+	rm -rf *.iso *.box
 
 .PHONY: clean prepare build
