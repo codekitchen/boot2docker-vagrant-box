@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.ssh.shell = "sh"
+  config.ssh.shell = "sh -l"
   config.ssh.username = "docker"
 
   # Used on Vagrant >= 1.7.x to disable the ssh key regeneration
