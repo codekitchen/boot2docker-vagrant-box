@@ -22,6 +22,9 @@ tar cf ${B2D_PERSISTENT_DIR}/userdata.tar ./.ssh
 cat <<EOF >${B2D_PERSISTENT_DIR}/bootlocal.sh
 sudo /usr/local/etc/init.d/nfs-client start
 
+# Ensure mount.vmhgfs is present for non-interactive shells
+# Fixes issue with Vagrant unable to mount shared directories automatically
+ln -s /usr/local/sbin/mount.vmhgfs /bin/mount.vmhgfs
 EOF
 sudo chmod a+x ${B2D_PERSISTENT_DIR}/bootlocal.sh
 
